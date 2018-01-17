@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -57,10 +58,12 @@ public class MainActivity extends AppCompatActivity {
             editWeightDouble = Float.parseFloat(editWeightString);
         }
 
+        //calculate BMI Index
         float calculateBMIIndex = editWeightDouble / (editHeightDoble * editHeightDoble);
-        String strResult = "" + calculateBMIIndex;
 
-        textViewResult.setText(strResult);
+        String strFinalMessage = "" + calculateBMIIndex;
+
+        textViewResult.setText(strFinalMessage);
 
         calculateCatagory(calculateBMIIndex);
 
