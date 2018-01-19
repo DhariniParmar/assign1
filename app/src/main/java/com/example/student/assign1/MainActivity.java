@@ -67,8 +67,23 @@ public class MainActivity extends AppCompatActivity {
 
         calculateCatagory(calculateBMIIndex);
 
+        printErrorMessage();
+
 
     }
+     public void printErrorMessage() {
+         if (editTextHeight.getText().toString().equals("")) {
+
+             editTextHeight.setError("Please Enter Height");
+         }
+         else{}
+         if (editTextWeight.getText().toString().equals("Please Enter Weight")){
+
+             editTextWeight.setError("");
+         }
+         else {}
+     }
+
 
     private void calculateCatagory(float bmiIndex) {
         String displayCatagoryStr = "";
