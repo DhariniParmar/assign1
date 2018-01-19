@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context="com.example.student.assign1.MainActivity">
 
 
@@ -15,6 +16,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="30dp"
         android:text="Dharini's  BMI CALCULATOR"
+        android:textColor="#000073"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintHorizontal_bias="0.565"
