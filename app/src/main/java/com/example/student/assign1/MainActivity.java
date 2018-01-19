@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    // Declare Variables
     private TextView textViewBMICalculator = null;
     private TextView textViewHeight = null;
     private TextView textviewWeight = null;
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         imageViewCatagory = (ImageView) findViewById(R.id.imageViewCatagory);
     }
 
+    //method for calculator
     public void clickedCalculator(View view) {
 
         String editHeightString = editTextHeight.getText().toString();
@@ -71,15 +72,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+     //print messages
      public void printErrorMessage() {
          if (editTextHeight.getText().toString().equals("")) {
 
              editTextHeight.setError("Please Enter Height");
          }
          else{}
-         if (editTextWeight.getText().toString().equals("Please Enter Weight")){
+         if (editTextWeight.getText().toString().equals("")){
 
-             editTextWeight.setError("");
+             editTextWeight.setError("Please Enter Weight");
          }
          else {}
      }
@@ -102,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (Float.compare(bmiIndex, 18.5f) > 0 && Float.compare(bmiIndex, 25) <= 0) {
             displayCatagoryStr = "Normal";
-            imageViewCatagory.setImageResource(R.drawable.again);
+            imageViewCatagory.setImageResource(R.drawable.normal);
 
         } else if (Float.compare(bmiIndex, 25) > 0 && Float.compare(bmiIndex, 30) <= 0) {
             displayCatagoryStr = "Overweight";
